@@ -22,7 +22,11 @@ public class Employee {
 
     private String firstName;
     private String lastName;
+
+    @Column(unique = true, length = 255)
     private String email;
+
+    @Temporal(value = TemporalType.DATE)
     private Date birthDate;
 
     @Transient
